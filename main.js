@@ -15,10 +15,14 @@ if (age > 65) {
 }
 
 //output
+let message = '';
 if (priceJunior !== 0) {
-    alert('Il tuo biglietto costerà ' + priceJunior.toFixed(2) + '€')
+    message = 'Il tuo biglietto costerà ' + priceJunior.toFixed(2) + '€'
 } else if (priceSenior !== 0) {
-    alert('Il tuo biglietto costerà ' + priceSenior.toFixed(2) + '€')
+    message = 'Il tuo biglietto costerà ' + priceSenior.toFixed(2) + '€'
 } else {
-    alert('Il tuo biglietto costerà ' + priceBase.toFixed(2) + '€')
+    message = 'Il tuo biglietto costerà ' + priceBase.toFixed(2) + '€';
 }
+
+alert(message)
+document.getElementById('msg').innerHTML = message;
